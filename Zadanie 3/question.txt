@@ -1,0 +1,13 @@
+Nazwa Testu <3
+Pytanko 1
+0|Odp 1
+1|Odp 2
+0|Odp 3
+0|Odp 4
+**********
+Pytanko 2
+0|Odp 11
+1|Odp 22
+0|Odp 33
+0|Odp 44
+**********
