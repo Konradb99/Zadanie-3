@@ -22,6 +22,7 @@ namespace Zadanie_3.Model
             Pytania.Add(new Pytanie(pytanie));
             return Pytania;
         }
+        //Edycja pytań w bazie
         public ObservableCollection<Pytanie> Edytuj_pytanie(Pytanie pytanie, ObservableCollection<Pytanie> Pytania, int index)
         {
             this.Pytania = Pytania;
@@ -68,6 +69,8 @@ namespace Zadanie_3.Model
             }
         }
 
+        //Pobieranie nazwy testu
+        //Na potrzeby zakladki quiz
         public string PobierzNazwe(string nazwaPliku)
         {
             string line;
@@ -92,6 +95,7 @@ namespace Zadanie_3.Model
             return line;
         }
 
+        //Odczytanie pytan z quizu, zapis do bazy
         internal ObservableCollection<Pytanie> Odczyt(string nazwaPliku)
         {
             string line;

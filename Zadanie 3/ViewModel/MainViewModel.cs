@@ -23,6 +23,7 @@ namespace Zadanie_3.ViewModel
 
         private int ladujPytania;
 
+        //Lacznik ladowania miedzy mainVM a addVM
         public int LadujPytania
         {
             get { return ladujPytania; }

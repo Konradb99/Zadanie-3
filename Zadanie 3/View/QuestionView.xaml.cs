@@ -25,6 +25,8 @@ namespace Zadanie_3.View
             InitializeComponent();
         }
 
+
+        //TRESC PYTANIA
         public static readonly DependencyProperty tresc_pytania =
             DependencyProperty.Register(
                 nameof(tresc_zapytania),
@@ -42,6 +44,8 @@ namespace Zadanie_3.View
             }
         }
 
+
+        //NAZWA PYTANIA
         public static readonly DependencyProperty nazwa_pytania =
             DependencyProperty.Register(
                 nameof(nazwa_zapytania),
@@ -66,6 +70,7 @@ namespace Zadanie_3.View
             );
 
 
+        //ODPOWIEDZ 1
         public string odpowiedz_1
         {
             get { return (string)GetValue(Odp_1_DP); }
@@ -82,6 +87,7 @@ namespace Zadanie_3.View
             );
 
 
+        //ODPOWIEDZ 2
         public string odpowiedz_2
         {
             get { return (string)GetValue(Odp_2_DP); }
@@ -97,7 +103,7 @@ namespace Zadanie_3.View
                 typeof(QuestionView)
             );
 
-
+        //ODPOWIEDZ 3
         public string odpowiedz_3
         {
             get { return (string)GetValue(Odp_3_DP); }
@@ -113,7 +119,7 @@ namespace Zadanie_3.View
                 typeof(QuestionView)
             );
 
-
+        //ODPOWIEDZ 4
         public string odpowiedz_4
         {
             get { return (string)GetValue(Odp_4_DP); }

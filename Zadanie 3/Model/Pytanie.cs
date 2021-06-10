@@ -13,6 +13,8 @@ namespace Zadanie_3.Model
         public string[] odp;
         public int poprawna;
 
+
+        #region konstruktory
         public Pytanie(string nazwa, string tresc, string[] odp, int indexpoprawny)
         {
             this.nazwa = nazwa;
@@ -40,7 +42,8 @@ namespace Zadanie_3.Model
             this.poprawna = 0;
         }
 
-        //Dodac metode do formatowania do zapisu
+        #endregion
+        //Metoda do odpowiedniego formatowania pytan do zapisu
         public string WriteString()
         {
             string writeString = $"{this.tresc}\n";

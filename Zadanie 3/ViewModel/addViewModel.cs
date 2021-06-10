@@ -122,6 +122,7 @@ namespace Zadanie_3.ViewModel
         #endregion
         #region ListBox
         private Pytanie wybranePytanie;
+        //Uzupelnienie formularza aktualnie wybranym
         public Pytanie WybranePytanie
         {
             get { return wybranePytanie;  }
@@ -151,6 +152,7 @@ namespace Zadanie_3.ViewModel
                     dodaj = new RelayCommand(
                         arg =>
                         {
+                            //Przygotowanie i dodanie pytania do bazy
                             string[] odp = model.Przygotuj_odpowiedzi(Odp1, Odp2, Odp3, Odp4);
                             Pytanie pytanko = model.Przygotuj_pytanie(Nazwa, Tresc, odp, PoprawnyIndex);
                             Pytania = model.Dodaj_pytanie(pytanko, Pytania);
@@ -172,6 +174,7 @@ namespace Zadanie_3.ViewModel
                     edytuj = new RelayCommand(
                         arg =>
                         {
+                            //Przygotowanie i edycja pytania w bazie
                             string[] odp = model.Przygotuj_odpowiedzi(Odp1, Odp2, Odp3, Odp4);
                             Pytanie pytanko = model.Przygotuj_pytanie(Nazwa, Tresc, odp, PoprawnyIndex);
                             Pytania = model.Edytuj_pytanie(pytanko, Pytania, IDZaznaczenia);
@@ -184,6 +187,8 @@ namespace Zadanie_3.ViewModel
             }
         }
 
+
+        //Pobranie poprawnej odpowiedzi z zaznaczonego radiobutton
         private RelayCommand radiopoprawna;
         public ICommand RadioPoprawna
         {
@@ -206,6 +211,8 @@ namespace Zadanie_3.ViewModel
             }
             PoprawnyIndex = poprawna_odp - 1;
         }
+
+        //Posrednik miedzy mainVM a addVM do ladowania pytan
         public void Laduj_pytania()
         {
             if(model.nazwaPliku != "" && model.nazwaPliku != null && model.wczytana == 1)

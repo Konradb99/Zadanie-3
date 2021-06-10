@@ -97,7 +97,6 @@ namespace Zadanie_3.ViewModel
         #region konstruktory
         public quizViewModel(Model model)
         {
-            //Dodac metode w model do odczytu z pliku
             this.model = model;
         }
         #endregion
